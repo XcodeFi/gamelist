@@ -20,7 +20,7 @@ function renderList(list) {
   }
   const html = `<div class="grid">${list.map(g => `
     <article class="game-card">
-      <img src="${g.image}" alt="${escapeHtml(g.title)}" />
+      <img src="${g.thumbnail}" alt="${escapeHtml(g.title)}" />
       <h3>${escapeHtml(g.title)}</h3>
       <p>${escapeHtml(g.desc)}</p>
       <button class="primary-btn" href="/game/${encodeURIComponent(g.id)}" data-navigo>Play Now</button>
@@ -72,7 +72,7 @@ router
   .on("/game/:id", async ({ data }) => {
     const all = await loadGames();
     const id = decodeURIComponent(data.id);
-    const game = all.find(g => g.id === id);
+    const game = all.find(g => g.id == id);
     if (game) renderGame(game);
     else appEl.innerHTML = "<h2>Game not found</h2>";
   })
