@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Home Page",
+    "content": "Chào mừng bạn đến trang chủ!"
+  },
+  "about": {
+    "title": "About Page",
+    "content": "Đây là trang giới thiệu."
+  },
+  "data": {
+    "title": "Data Page",
+    "items": ["Apple", "Banana", "Orange"]
+  }
+}

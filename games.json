@@ -1,0 +1,18 @@
+[
+  {
+    "id": "doge",
+    "title": "Doge Adventure",
+    "desc": "Help Doge collect much wow!",
+    "image": "doge.jpg",
+    "category": "Adventure",
+    "url": "https://example.com/doge"
+  },
+  {
+    "id": "cat",
+    "title": "Grumpy Cat's Quest",
+    "desc": "Say NO to everything!",
+    "image": "cat.jpg",
+    "category": "Puzzle",
+    "url": "https://example.com/cat"
+  }
+]
