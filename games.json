@@ -1,18 +1,82 @@
 [
   {
-    "id": "doge",
+    "id": 1,
     "title": "Doge Adventure",
-    "desc": "Help Doge collect much wow!",
-    "image": "doge.jpg",
-    "category": "Adventure",
+    "desc": "Help Doge collect much wow. Such adventure!",
+    "thumbnail": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c",
+    "category": "Trending",
     "url": "https://example.com/doge"
   },
   {
-    "id": "cat",
+    "id": 2,
     "title": "Grumpy Cat's Quest",
-    "desc": "Say NO to everything!",
-    "image": "cat.jpg",
-    "category": "Puzzle",
-    "url": "https://example.com/cat"
+    "desc": "Join Grumpy Cat in saying NO to everything!",
+    "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f",
+    "category": "Classic",
+    "url": "https://example.com/grumpycat-quest"
+  },
+  {
+    "id": 3,
+    "title": "Nyan Cat Runner",
+    "desc": "Rainbow trail through space adventure!",
+    "thumbnail": "https://images.unsplash.com/photo-1624996379697-f01d168b1a52",
+    "category": "Trending",
+    "url": "https://example.com/nyancat-runner"
+  },
+  {
+    "id": 4,
+    "title": "Pepe's Platformer",
+    "desc": "Jump through meme history with Pepe!",
+    "thumbnail": "https://images.unsplash.com/photo-1509281373149-e957c6296406",
+    "category": "Classic",
+    "url": "https://example.com/pepe-platformer"
+  },
+  {
+    "id": 5,
+    "title": "Meme Shooter",
+    "desc": "Blast memes in this epic shooter!",
+    "thumbnail": "https://images.unsplash.com/photo-1516321318423-ffd1bd0e58b8",
+    "category": "Community",
+    "url": "https://example.com/meme-shooter"
+  },
+  {
+    "id": 6,
+    "title": "Trollface Puzzle",
+    "desc": "Solve tricky puzzles with Trollface!",
+    "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    "category": "Physics",
+    "url": "https://example.com/trollface-puzzle"
+  },
+  {
+    "id": 7,
+    "title": "Rickroll Dance",
+    "desc": "Dance with Rick in this fun game!",
+    "thumbnail": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+    "category": "Elon's",
+    "url": "https://example.com/rickroll-dance"
+  },
+  {
+    "id": 8,
+    "title": "Distracted BF Run",
+    "desc": "Run as the distracted boyfriend!",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    "category": "Community",
+    "url": "https://example.com/distractedbf-run"
+  },
+  {
+    "id": 9,
+    "title": "Doge Adventure 2",
+    "desc": "More wow, more adventure!",
+    "thumbnail": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c",
+    "category": "Trending",
+    "url": "https://example.com/doge2"
+  },
+  {
+    "id": 10,
+    "title": "Grumpy Cat's Revenge",
+    "desc": "Grumpy Cat is back with a vengeance!",
+    "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f",
+    "category": "Classic",
+    "url": "https://example.com/grumpycat-revenge"
   }
 ]
