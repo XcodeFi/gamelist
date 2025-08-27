@@ -1,4 +1,4 @@
-const router = new Navigo("/", { hash: false });
+const router = new Navigo("/", { hash: true });
 const appEl = document.getElementById("app");
 const searchInput = document.getElementById("search");
 const topSearch = document.getElementById("searchTop");
@@ -18,13 +18,13 @@ function renderList(list) {
     appEl.innerHTML = `<h2>No games found</h2>`;
     return;
   }
-  const html = `<div class="grid">${list.map(g => `
-    <article class="game-card">
+  const html = `<div class="cards">${list.map(g => `
+  <a href="/game/${encodeURIComponent(g.id)}" data-navigo>
+    <figure class="card" >
       <img src="${g.thumbnail}" alt="${escapeHtml(g.title)}" />
-      <h3>${escapeHtml(g.title)}</h3>
-      <p>${escapeHtml(g.desc)}</p>
-      <button class="primary-btn" href="/game/${encodeURIComponent(g.id)}" data-navigo>Play Now</button>
-    </article>`).join("")}</div>`;
+      <figcaption>${escapeHtml(g.title)}</figcaption>
+    </figure>
+  </a>`).join("")}</div>`;
   appEl.innerHTML = html;
   router.updatePageLinks(); // ensure navigo handles new anchors
 }
