@@ -13,21 +13,62 @@ async function loadGames() {
   return games;
 }
 
-function renderList(list) {
+const PAGE_SIZE = 8;
+let currentPage = 1;
+
+function renderList(list, page = 1) {
   if (!list.length) {
     appEl.innerHTML = `<h2>No games found</h2>`;
     return;
   }
-  const html = `<div class="cards">${list.map(g => `
-  <a href="/game/${encodeURIComponent(g.id)}" data-navigo>
-    <figure class="card" >
-      <img src="${g.thumbnail}" alt="${escapeHtml(g.title)}" />
-      <figcaption>${escapeHtml(g.title)}</figcaption>
-    </figure>
-  </a>`).join("")}</div>`;
+
+  currentPage = page;
+  const totalPages = Math.ceil(list.length / PAGE_SIZE);
+  const start = (page - 1) * PAGE_SIZE;
+  const end = start + PAGE_SIZE;
+  const pageItems = list.slice(start, end);
+
+  const html = `
+    <div class="cards">
+      ${pageItems.map(g => `
+        <a href="/game/${encodeURIComponent(g.id)}" data-navigo>
+          <figure class="card">
+            <img data-src="${g.thumbnail}" alt="${escapeHtml(g.title)}" />
+            <figcaption>${escapeHtml(g.title)}</figcaption>
+          </figure>
+        </a>
+      `).join("")}
+    </div>
+    ${renderPagination(totalPages, page, list)}
+  `;
+
   appEl.innerHTML = html;
-  router.updatePageLinks(); // ensure navigo handles new anchors
+  router.updatePageLinks();
+
+  // lazy load ảnh + hiệu ứng blur
+  const imgs = document.querySelectorAll(".card img");
+  imgs.forEach(img => {
+    const src = img.getAttribute("data-src");
+    if (!src) return;
+    const temp = new Image();
+    temp.src = src;
+    temp.onload = () => {
+      img.src = src;
+      img.classList.add("loaded");
+    };
+  });
+
+  // gắn event cho pagination
+  const pageBtns = document.querySelectorAll(".pagination button");
+  pageBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const newPage = parseInt(btn.dataset.page, 10);
+      renderList(list, newPage);
+    });
+  });
 }
+
+
 
 function renderGame(game) {
   appEl.innerHTML = `
@@ -89,5 +130,25 @@ async function searchAndRender(term) {
   renderList(all.filter(g => g.title.toLowerCase().includes(t) || g.desc.toLowerCase().includes(t)));
 }
 
+function renderPagination(totalPages, page, list) {
+  if (totalPages <= 1) return "";
+
+  let buttons = "";
+  for (let i = 1; i <= totalPages; i++) {
+    buttons += `
+      <button data-page="${i}" class="${i === page ? "active" : ""}">
+        ${i}
+      </button>
+    `;
+  }
+
+  return `
+    <div class="pagination">
+      ${buttons}
+    </div>
+  `;
+}
+
+
 searchInput.addEventListener("input", (e)=> searchAndRender(e.target.value));
-topSearch.addEventListener("input", (e)=> searchAndRender(e.target.value));
+// topSearch.addEventListener("input", (e)=> searchAndRender(e.target.value));

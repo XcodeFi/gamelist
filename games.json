@@ -35,7 +35,7 @@
     "id": 5,
     "title": "Meme Shooter",
     "desc": "Blast memes in this epic shooter!",
-    "thumbnail": "https://images.unsplash.com/photo-1516321318423-ffd1bd0e58b8",
+    "thumbnail": "https://images.unsplash.com/photo-1509281373149-e957c6296406",
     "category": "Community",
     "url": "https://example.com/meme-shooter"
   },
@@ -73,6 +73,30 @@
   },
   {
     "id": 10,
+    "title": "Grumpy Cat's Revenge",
+    "desc": "Grumpy Cat is back with a vengeance!",
+    "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f",
+    "category": "Classic",
+    "url": "https://example.com/grumpycat-revenge"
+  },
+    {
+    "id": 11,
+    "title": "Distracted BF Run",
+    "desc": "Run as the distracted boyfriend!",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    "category": "Community",
+    "url": "https://example.com/distractedbf-run"
+  },
+  {
+    "id": 12,
+    "title": "Doge Adventure 2",
+    "desc": "More wow, more adventure!",
+    "thumbnail": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c",
+    "category": "Trending",
+    "url": "https://example.com/doge2"
+  },
+  {
+    "id": 13,
     "title": "Grumpy Cat's Revenge",
     "desc": "Grumpy Cat is back with a vengeance!",
     "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f",
