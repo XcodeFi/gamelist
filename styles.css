@@ -43,6 +43,8 @@ body {
 .sidebar {
   width: 220px;
   padding: 16px;
+  position: fixed;
+  top: 40px;
 }
 .sidebar input {
   width: 100%;
@@ -83,6 +85,8 @@ body {
   flex: 1;
   padding: 0 20px;
   margin-top: -24px;
+  margin-left: 220px;
+  overflow-y: auto;
 }
 .grid {
   display: flex;
