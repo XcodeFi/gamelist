@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "title": "Doge Adventure",
-    "desc": "Help Doge collect much wow. Such adventure!",
-    "thumbnail": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c",
+    "title": "Draw Bridge",
+    "desc": "Help the prince cross the drawbridge!",
+    "thumbnail": "./game-thumbnails/drawbridge.png",
     "category": "Trending",
-    "url": "https://example.com/doge"
+    "url": "https://weegoon.github.io/drawbridgepuzzle_xiaomiH5/"
   },
   {
     "id": 2,
-    "title": "Grumpy Cat's Quest",
-    "desc": "Join Grumpy Cat in saying NO to everything!",
-    "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f",
+    "title": "Sting Shoot",
+    "desc": "Shoot the stickman with a bow and arrow!",
+    "thumbnail": "./game-thumbnails/stingshoot.png",
     "category": "Classic",
-    "url": "https://example.com/grumpycat-quest"
+    "url": "https://weegoon.github.io/stickshot/"
   },
   {
     "id": 3,

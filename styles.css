@@ -39,25 +39,56 @@ body {
 .page-container {
   display: flex;
   min-height: calc(100vh - 64px);
+  flex-direction: column;
 }
+
+@media screen and (min-width: 900px) {
+  .page-container {
+    flex-direction: row;
+  }
+}
+
 .sidebar {
-  width: 220px;
-  padding: 16px;
-  position: fixed;
+  width: 100%;
+  /* padding: 16px; */
+  /* position: fixed; */
   top: 40px;
 }
+
+@media screen and (min-width: 900px) {
+  .sidebar {
+    width: 220px;
+    position: fixed;
+    overflow-y: auto;
+    padding: 16px 0 16px 16px;
+  }
+}
+
 .sidebar input {
   width: 100%;
   padding: 8px;
   margin-bottom: 12px;
   border-radius: 6px;
   font-family: 'bangers', cursive;
+  /* padding: 0 20px; */
 }
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
 }
+
+@media screen and (min-width: 900px) {
+  .sidebar ul {
+    display: block;
+    overflow: hidden;
+  }
+}
+
 .sidebar li {
   margin-bottom: 8px;
 }
@@ -80,14 +111,19 @@ body {
   transform: scale(1.05);
 }
 
-
 .content {
   flex: 1;
   padding: 0 20px;
-  margin-top: -24px;
-  margin-left: 220px;
-  overflow-y: auto;
 }
+
+@media screen and (min-width: 900px) {
+  .content {
+    margin-top: 18px;
+    margin-left: 220px;
+    overflow-y: auto;
+  } 
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -129,11 +165,18 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); 
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 40px;
   justify-items: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
+
+@media screen and (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  }
+}
+
 .cards .card {
   position: relative;
   width: 100%;
@@ -261,13 +304,14 @@ body {
     width: calc(50% - 16px);
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 900px) {
   .page-container {
     flex-direction: column;
   }
   .sidebar {
     width: 100%;
-    order: 2;
+    /* order: 2; */
+    padding: 0 20px;
   }
   .game-card {
     width: 100%;
@@ -357,6 +401,7 @@ body {
 .contract-address {
   font-family: monospace;
   color: #222;
+  word-break: break-all;
 }
 
 .copy-btn {
