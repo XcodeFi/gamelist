@@ -17,19 +17,19 @@
   },
   {
     "id": 3,
-    "title": "Nyan Cat Runner",
-    "desc": "Rainbow trail through space adventure!",
-    "thumbnail": "https://images.unsplash.com/photo-1624996379697-f01d168b1a52",
+    "title": "Litter yard",
+    "desc": "Draw lines to guide the ball to the goal!",
+    "thumbnail": "./game-thumbnails/litteryard.png",
     "category": "Trending",
-    "url": "https://example.com/nyancat-runner"
+    "url": "https://weegoon.littleyardgames.com/preview/drawline_xiaomi_v1_0_0_a738d8e981/index.html"
   },
   {
     "id": 4,
-    "title": "Pepe's Platformer",
-    "desc": "Jump through meme history with Pepe!",
-    "thumbnail": "https://images.unsplash.com/photo-1509281373149-e957c6296406",
+    "title": "Presidential Golf",
+    "desc": "Play golf with the president!",
+    "thumbnail": "./game-thumbnails/presidentialgolf.png",
     "category": "Classic",
-    "url": "https://example.com/pepe-platformer"
+    "url": "https://plays.org/game/presidential-golf/"
   },
   {
     "id": 5,
