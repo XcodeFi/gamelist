@@ -17,11 +17,11 @@
   },
   {
     "id": 3,
-    "title": "Nyan Cat Runner",
-    "desc": "Rainbow trail through space adventure!",
-    "thumbnail": "https://images.unsplash.com/photo-1624996379697-f01d168b1a52",
+    "title": "Litter yard",
+    "desc": "Draw lines to guide the ball to the goal!",
+    "thumbnail": "./game-thumbnails/litteryard.png",
     "category": "Trending",
-    "url": "https://example.com/nyancat-runner"
+    "url": "https://weegoon.littleyardgames.com/preview/drawline_xiaomi_v1_0_0_a738d8e981/index.html"
   },
   {
     "id": 4,
