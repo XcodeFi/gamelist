@@ -152,7 +152,7 @@ function renderGame(game) {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    height: calc(100vh - 60px);">
+    height: calc(100vh - 40px);">
       <iframe src="${
         game.url
       }" style="width: 100%; height: 100%; border: none; background: black;"></iframe>
