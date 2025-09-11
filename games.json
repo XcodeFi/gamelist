@@ -25,11 +25,11 @@
   },
   {
     "id": 4,
-    "title": "Pepe's Platformer",
-    "desc": "Jump through meme history with Pepe!",
-    "thumbnail": "https://images.unsplash.com/photo-1509281373149-e957c6296406",
+    "title": "Presidential Golf",
+    "desc": "Play golf with the president!",
+    "thumbnail": "./game-thumbnails/presidentialgolf.png",
     "category": "Classic",
-    "url": "https://example.com/pepe-platformer"
+    "url": "https://plays.org/game/presidential-golf/"
   },
   {
     "id": 5,
