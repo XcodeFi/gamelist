@@ -139,20 +139,25 @@ function renderList(list, page = 1) {
       setTimeout(() => (copyStatus.style.display = "none"), 2000);
     });
   });
+
 }
 
 function renderGame(game) {
+    // <h2>${escapeHtml(game.title)}</h2>
+    // <p>${escapeHtml(game.desc)}</p>
   appEl.innerHTML = `
-    <h2>${escapeHtml(game.title)}</h2>
-    <p>${escapeHtml(game.desc)}</p>
-    <div style="margin:12px 0">
+    <div style="position: fixed;
+    width: 100%;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: calc(100vh - 60px);">
       <iframe src="${
         game.url
-      }" width="100%" height="600" style="border:1px solid #e5e7eb;border-radius:8px"></iframe>
+      }" style="width: 100%; height: 100%; border: none; background: black;"></iframe>
     </div>
-    <p><a class="hover-a" href="/" data-navigo>⬅ Back to list</a></p>
   `;
-  router.updatePageLinks();
 }
 
 function escapeHtml(str) {
