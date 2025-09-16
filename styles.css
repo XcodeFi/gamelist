@@ -25,11 +25,27 @@ body {
   }
 }
 
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #fad95e;
+  text-shadow: 0 0.125rem 0 var(--shadow-color), 0 0 0.4em rgb(255, 106, 0);
+}
+
 .topbar {
   padding: 12px 20px;
   position: sticky;
   top: 0;
   z-index: 10;
+  z-index: 999;
+  background: linear-gradient(to bottom, #ffffff03, #ffffff1a);
 }
 .topbar-inner {
   display: flex;
@@ -38,7 +54,7 @@ body {
 }
 .page-container {
   display: flex;
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 74px);
   flex-direction: column;
 }
 
@@ -52,7 +68,7 @@ body {
   width: 100%;
   /* padding: 16px; */
   /* position: fixed; */
-  top: 40px;
+  top: 74px;
 }
 
 @media screen and (min-width: 900px) {
@@ -69,7 +85,7 @@ body {
   padding: 8px;
   margin-bottom: 12px;
   border-radius: 6px;
-  font-family: 'bangers', cursive;
+  font-family: "bangers", cursive;
   /* padding: 0 20px; */
 }
 .sidebar ul {
@@ -99,11 +115,12 @@ body {
   border-radius: 8px;
   text-decoration: none;
   color: white;
+  font-size: 1.5rem;
 }
 
 .hover-a {
   color: white;
-  transition: color .2s ease-in-out, transform .2s ease-in-out;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .hover-a:hover {
@@ -121,7 +138,7 @@ body {
     margin-top: 18px;
     margin-left: 220px;
     overflow-y: auto;
-  } 
+  }
 }
 
 .grid {
@@ -135,9 +152,9 @@ body {
 
   box-shadow: 0 6px 14px rgba(15, 23, 42, 0.06);
   background: linear-gradient(to bottom, #ffffff03, #ffffff1a);
-  border-radius: .5rem;
-  padding: .5rem;
-  border: .0625em solid rgba(255, 255, 255, .2);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 0.0625em solid rgba(255, 255, 255, 0.2);
   width: 20rem;
 }
 .game-card img {
@@ -151,14 +168,15 @@ body {
   margin: 0 0 6px 0;
   font-size: 16px;
   color: #fad95e;
-  text-shadow: 0 .125rem 0 var(--shadow-color), 0 0 .4em rgb(255, 106, 0);
+  text-shadow: 0 0.125rem 0 var(--shadow-color), 0 0 0.4em rgb(255, 106, 0);
 }
 
 .game-card p {
   margin: 0 0 10px 0;
   font-size: 14px;
   color: #7cffbe;
-  text-shadow: 0 .125em 0 var(--shadow-color), 0 0 .3125em rgba(0, 255, 128, .7);
+  text-shadow: 0 0.125em 0 var(--shadow-color),
+    0 0 0.3125em rgba(0, 255, 128, 0.7);
 }
 .game-card a.btn {
 }
@@ -185,11 +203,11 @@ body {
   margin: 0;
   overflow: hidden;
   background: linear-gradient(to bottom, #ffffff03, #ffffff1a);
-  box-shadow: 0 5px 10px rgba(0,0,0,.8);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
   transform-origin: center top;
   transform-style: preserve-3d;
   transform: translateZ(0);
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 10px;
 }
 .cards .card img {
@@ -219,10 +237,10 @@ body {
   background: none;
   /* color: #fff; */
   transform: translateY(100%);
-  transition: .3s;
+  transition: 0.3s;
 
   color: #fad95e;
-  text-shadow: 0 .125rem 0 var(--shadow-color), 0 0 .4em rgb(255, 106, 0);
+  text-shadow: 0 0.125rem 0 var(--shadow-color), 0 0 0.4em rgb(255, 106, 0);
 }
 .cards .card:after {
   position: absolute;
@@ -232,10 +250,15 @@ body {
   height: 100%;
   top: -90%;
   left: -20px;
-  opacity: .1;
+  opacity: 0.1;
   transform: rotate(45deg);
-  background: linear-gradient(to top, transparent, #fff 15%, rgba(255,255,255,.5));
-  transition: .3s;
+  background: linear-gradient(
+    to top,
+    transparent,
+    #fff 15%,
+    rgba(255, 255, 255, 0.5)
+  );
+  transition: 0.3s;
 }
 .cards .card:hover,
 .cards .card:focus,
@@ -243,13 +266,10 @@ body {
   /* box-shadow: 0 8px 16px 3px rgba(0,0,0,.6); */
   transform: translateY(-3px) scale(1.05) rotateX(15deg);
 
-    /* viền phát sáng vàng-cam */
+  /* viền phát sáng vàng-cam */
   border-color: #fad95e;
-  box-shadow:
-    0 0 10px rgba(255, 170, 0, 0.7),
-    0 0 20px rgba(255, 140, 0, 0.6),
-    0 0 40px rgba(255, 106, 0, 0.5),
-    0 8px 16px 3px rgba(0,0,0,.6);
+  box-shadow: 0 0 10px rgba(255, 170, 0, 0.7), 0 0 20px rgba(255, 140, 0, 0.6),
+    0 0 40px rgba(255, 106, 0, 0.5), 0 8px 16px 3px rgba(0, 0, 0, 0.6);
 }
 .cards .card:hover figcaption,
 .cards .card:focus figcaption,
@@ -261,7 +281,7 @@ body {
 .cards .card:active:after {
   transform: rotate(25deg);
   top: -40%;
-  opacity: .15;
+  opacity: 0.15;
 }
 
 .primary-btn {
@@ -331,7 +351,8 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s;
-  font-family: 'bangers', cursive;
+  font-family: "bangers", cursive;
+  font-size: 1.25rem;
 }
 
 .pagination button:hover {
@@ -344,45 +365,38 @@ body {
   border-color: #3b82f6;
 }
 
-
- /* about section */
-.about-section {
+/* about section */
+.about-section, .contract-footer {
   max-width: 800px;
   margin: 40px auto;
-  padding: 24px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 .about-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 16px;
-  color: #222;
+  color: #0ff;
 }
 
 .about-section p {
   margin-bottom: 12px;
-  color: #444;
+  color: white;
   line-height: 1.6;
 }
 
 /* Footer Contract Info */
 .contract-footer {
-  max-width: 800px;
   margin: 40px auto;
   padding: 20px;
-  background: #f9fafb;
-  border-radius: 12px;
-  text-align: center;
 }
 
 .footer-title {
   font-weight: bold;
   font-size: 1rem;
-  color: #333;
+  color: #0ff;
   margin-bottom: 12px;
 }
 
@@ -391,16 +405,17 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  color: white;
 }
 
 .contract-info p {
   font-size: 0.9rem;
-  color: #555;
+  color: white;
 }
 
 .contract-address {
   font-family: monospace;
-  color: #222;
+  color: white;
   word-break: break-all;
 }
 
@@ -415,6 +430,7 @@ body {
   background: #e5e7eb;
   cursor: pointer;
   transition: background 0.2s;
+  font-family: cursive;
 }
 
 .copy-btn:hover {
